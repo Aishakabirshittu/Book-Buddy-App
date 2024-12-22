@@ -26,6 +26,7 @@ cd book-buddy
 npm install
 4. Run the app:
 npm run dev
+
 5.Open your browser and visit:
 http://localhost:5173
 
@@ -46,14 +47,19 @@ Books inspire, educate, and entertain us, but finding time and tools to connect 
 We’d love your help to make Book Buddy even better!
 
 Fork the repository.
+
 Make your changes
+
 Submit a pull request.
 
 📝 Future Features
 
 Here’s what’s on the horizon:
+
 Personalized book recommendations.
+
 A community feature for readers to connect.
+
 User profiles to track your reading list.
 
 💌 Let’s Connect!
