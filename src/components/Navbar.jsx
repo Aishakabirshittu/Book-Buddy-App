@@ -5,10 +5,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary text-white p-4">
+    <nav className="bg-primary text-white p-3">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold">Book Buddy</h1>
+        <h1 className="md:mt-1 text-2xl font-bold">Book Buddy</h1>
 
         {/* Hamburger Menu for Small Screens */}
         <button
@@ -44,7 +44,7 @@ const Navbar = () => {
       <ul
         className={`${
           isOpen ? 'block' : 'hidden'
-        } sm:flex sm:space-x-6 bg-primary sm:bg-transparent w-full sm:w-auto mt-4 sm:mt-0`}
+        } sm:flex  sm:space-x-6 md:justify-end  bg-primary sm:bg-transparent w-full sm:w-auto sm:mt-0`}
       >
         <li className="text-center sm:text-left">
           <NavLink
