@@ -1,0 +1,107 @@
+/* Background Animation */
+.animated-bg {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  background: linear-gradient(120deg, #a2cecb, #e4f4f3);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  overflow: hidden; 
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Home Container Class */
+.home-container {
+  min-height: calc(100vh - 64px); 
+  position: relative; 
+  z-index: 1; 
+  text-align: center; 
+  padding-bottom: 64px; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+nav {
+  position: relative; 
+}
+
+nav ul {
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.3s ease; 
+}
+
+nav ul.block {
+  max-height: 500px; 
+}
+
+@media (min-width: 640px) { 
+  nav ul {
+    flex-direction: row; 
+    max-height: none; 
+  }
+}
+
+button svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Stars Container */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ignore clicks on stars */
+  overflow: hidden;
+}
+
+/* Individual Star Styles */
+.star {
+  position: absolute;
+  width: 20px;
+  animation: moveAndGlow 8s linear infinite;
+}
+
+/* Animations */
+@keyframes moveAndGlow {
+  0% {
+    transform: translateY(-100px) scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(calc(100vh / 2)) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Position Randomization for Each Star */
+.star:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.star:nth-child(2) {
+  left: 50%;
+  animation-delay: 1s;
+}
+.star:nth-child(3) {
+  left: 80%;
+  animation-delay: 2s;
+}
